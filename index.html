@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="libs/wangeditor/css/wangEditor.min.css">
+        <link rel="stylesheet" href="libs/highlightJS/styles/zenburn.css">
+        
+        <style>
+            *{
+                font-family: 'Courier New';
+            }
+            #wang-content{
+                /*height: 200px;*/
+            }
+
+
+            .hljs-line-numbers {
+                text-align: right;
+                border-right: 1px solid #ccc;
+                color: #999;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wang-content"></div>
+
+        <button id="wang-render-btn">获取内容并显示</button>
+
+        <div id="wang-render-text">
+            <p>html</p><pre style="max-width:100%;overflow-x:auto;"><code class="html hljs xml" codemark="1"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"libs/wangeditor/css/wangEditor.min.css"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+            <span class="hljs-selector-id">#wang-content</span>{
+                <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+   
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"libs/jquery/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"libs/wangeditor/js/wangEditor.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'js/app.js'</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><p>js</p><pre style="max-width:100%;overflow-x:auto;"><code class="javascript hljs" codemark="1">$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> editor = <span class="hljs-keyword">new</span> wangEditor(<span class="hljs-string">'wang-content'</span>);
+    editor.create();
+
+
+    $(<span class="hljs-string">'#wang-render-btn'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> html = editor.$txt.html();
+        <span class="hljs-built_in">console</span>.log(html);
+        $(<span class="hljs-string">'#wang-render-text'</span>).html(html);
+    });
+});</code></pre><p>&lt;script&gt;alert(0);&lt;/script&gt;</p><p>pic</p><p><img style="max-width:100%;" src="" https:="" timgsa.baidu.com="" timg?image&quality="80&size=b9999_10000&amp;sec=1486104303240&amp;di=17e67092f7d0f0a1a2c591658d8cd7cb&amp;imgtype=0&amp;src=http%3A%2F%2Fpic2.ooopic.com%2F01%2F13%2F85%2F83bOOOPICfe.jpg&quot;/"><img style="max-width:100%;" src="https://timgsa.baidu.com/timg?imagequality=80size=b9999_10000&amp…pe=0src=http%3A%2F%2Fpic2.ooopic.com%2F01%2F13%2F85%2F83bOOOPICfe.jpg"><br></p><p><br></p>
+        </div>
+
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="libs/wangeditor/js/wangEditor.js"></script>
+        <script src='libs/highlightJS/highlight.pack.min.js'></script>
+        <script src='libs/highlightJS/highlightjs-line-numbers.min.js'></script>
+        <script src='js/app.js'></script>
+    </body>
+</html>
